@@ -83,6 +83,29 @@ curl -u admin:admin \
   'http://localhost:8080/alfresco/s/alfresco/datasets/clients-eu/records?Surname=Hopper'
 ```
 
+![Example Query](./Images/alfresco-dataset-rest-example.png)
+
+## Admin UI
+
+To create a new schema, open the Dataset Manager in the Admin Tools of Share
+
+![Creating a new Schema](./Images/alfresco-dataset-schema-admin.png)
+
+Add fields and arrays of the desired type to the schema:
+
+![Edit the Schema](./Images/alfresco-dataset-schema-edit.png)
+
+To Add a dataset based on a schema select the dataset Tab:
+
+![Edit Dataset](./Images/alfresco-dataset-edit.png)
+
+Add a Record to the Dataset:
+
+
+![Add a Record](./Images/alfresco-dataset-edit-record.png)
+
+Be sure to save the changes to write back to the repository.
+
 ## Module layout
 
 | Module | Purpose |
