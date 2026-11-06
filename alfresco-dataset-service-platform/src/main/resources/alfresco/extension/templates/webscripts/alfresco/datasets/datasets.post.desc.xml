@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>Create Dataset</shortname>
+    <description>Creates a new dataset from {name, description?, data?}</description>
+    <url>/alfresco/datasets</url>
+    <format default="json">extension</format>
+    <authentication>admin</authentication>
+    <transaction allow="readwrite">required</transaction>
+    <family>Hyland Dataset Service</family>
+</webscript>

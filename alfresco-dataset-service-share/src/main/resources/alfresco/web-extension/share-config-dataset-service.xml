@@ -1,0 +1,10 @@
+<alfresco-config>
+    <config evaluator="string-compare" condition="AdminConsole">
+        <tools>
+            <tool id="dataset-service"
+                  label="Dataset Manager"
+                  description="Create and manage datasets stored as JSON files"
+                  url="/page/hdp/ws/alfresco/datasetservice"/>
+        </tools>
+    </config>
+</alfresco-config>

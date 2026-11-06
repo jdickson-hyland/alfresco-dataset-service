@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="dss:datasetServiceModel"
+       xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+    <description>Hyland Dataset Service Content Model</description>
+    <author>Hyland</author>
+    <version>1.0</version>
+
+    <imports>
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+        <import uri="http://www.alfresco.org/model/content/1.0"    prefix="cm"/>
+    </imports>
+
+    <namespaces>
+        <namespace uri="http://www.alfresco.org/model/datasetservice/1.0" prefix="dss"/>
+    </namespaces>
+
+    <aspects>
+        <aspect name="dss:dataset">
+            <title>Dataset</title>
+            <description>Marker aspect applied to dataset JSON files so they can be reliably identified</description>
+        </aspect>
+    </aspects>
+
+</model>

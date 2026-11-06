@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>List Datasets</shortname>
+    <description>Returns all datasets (metadata only)</description>
+    <url>/alfresco/datasets</url>
+    <format default="json">extension</format>
+    <authentication>admin</authentication>
+    <transaction allow="readonly">required</transaction>
+    <family>Hyland Dataset Service</family>
+</webscript>

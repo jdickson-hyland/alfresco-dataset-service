@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>Get Dataset Version</shortname>
+    <description>Returns the JSON content of a specific dataset version</description>
+    <url>/alfresco/datasets/{datasetName}/versions/{label}</url>
+    <format default="json">extension</format>
+    <authentication>admin</authentication>
+    <transaction allow="readonly">required</transaction>
+    <family>Hyland Dataset Service</family>
+</webscript>

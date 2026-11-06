@@ -1,0 +1,10 @@
+<webscript>
+    <shortname>Get Dataset Element</shortname>
+    <description>Returns the JSON value at the given dot-notation field path (default: whole document)</description>
+    <url>/alfresco/datasets/{datasetName}/data</url>
+    <url>/alfresco/datasets/{datasetName}/data?field={field}</url>
+    <format default="json">extension</format>
+    <authentication>admin</authentication>
+    <transaction allow="readonly">required</transaction>
+    <family>Hyland Dataset Service</family>
+</webscript>

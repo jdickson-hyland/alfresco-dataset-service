@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- ===== Services ===== -->
+
+    <bean id="datasetService"
+          class="org.alfresco.datasetservice.service.DatasetServiceImpl">
+        <property name="nodeService"          ref="NodeService"/>
+        <property name="contentService"       ref="ContentService"/>
+        <property name="versionService"       ref="versionService"/>
+        <property name="namespaceService"     ref="NamespaceService"/>
+        <property name="transactionService"   ref="TransactionService"/>
+    </bean>
+
+    <!-- ===== Bootstrap ===== -->
+
+    <bean id="datasetServiceBootstrap"
+          class="org.alfresco.datasetservice.bootstrap.DatasetServiceBootstrap"
+          parent="module.baseComponent">
+        <property name="moduleId"           value="alfresco-dataset-service-platform"/>
+        <property name="name"               value="DatasetServiceBootstrap"/>
+        <property name="description"        value="Ensures the Datasets folder exists in the Data Dictionary"/>
+        <property name="sinceVersion"       value="1.0"/>
+        <property name="appliesFromVersion" value="1.0"/>
+        <property name="datasetService"     ref="datasetService"/>
+    </bean>
+
+    <!-- ===== Web Scripts ===== -->
+    <!-- Bean ID convention: webscript.<descriptor-path-with-dots>.<method> -->
+
+    <!-- Collection: /alfresco/datasets -->
+    <bean id="webscript.alfresco.datasets.datasets.get"
+          class="org.alfresco.datasetservice.webscript.DatasetsListWebScript"
+          parent="webscript">
+        <property name="datasetService" ref="datasetService"/>
+    </bean>
+
+    <bean id="webscript.alfresco.datasets.datasets.post"
+          class="org.alfresco.datasetservice.webscript.DatasetCreateWebScript"
+          parent="webscript">
+        <property name="datasetService" ref="datasetService"/>
+    </bean>
+
+    <!-- Single dataset: /alfresco/datasets/{datasetName} -->
+    <bean id="webscript.alfresco.datasets.dataset.get"
+          class="org.alfresco.datasetservice.webscript.DatasetGetWebScript"
+          parent="webscript">
+        <property name="datasetService" ref="datasetService"/>
+    </bean>
+
+    <bean id="webscript.alfresco.datasets.dataset.put"
+          class="org.alfresco.datasetservice.webscript.DatasetUpdateWebScript"
+          parent="webscript">
+        <property name="datasetService" ref="datasetService"/>
+    </bean>
+
+    <bean id="webscript.alfresco.datasets.dataset.delete"
+          class="org.alfresco.datasetservice.webscript.DatasetDeleteWebScript"
+          parent="webscript">
+        <property name="datasetService" ref="datasetService"/>
+    </bean>
+
+    <!-- Versions -->
+    <bean id="webscript.alfresco.datasets.dataset-versions.get"
+          class="org.alfresco.datasetservice.webscript.DatasetVersionsWebScript"
+          parent="webscript">
+        <property name="datasetService" ref="datasetService"/>
+    </bean>
+
+    <bean id="webscript.alfresco.datasets.dataset-version.get"
+          class="org.alfresco.datasetservice.webscript.DatasetVersionGetWebScript"
+          parent="webscript">
+        <property name="datasetService" ref="datasetService"/>
+    </bean>
+
+    <!-- Instance records query: /alfresco/datasets/{datasetName}/records?field=value -->
+    <bean id="webscript.alfresco.datasets.dataset-records.get"
+          class="org.alfresco.datasetservice.webscript.DatasetRecordsGetWebScript"
+          parent="webscript">
+        <property name="datasetService" ref="datasetService"/>
+    </bean>
+
+    <!-- Element CRUD: /alfresco/datasets/{datasetName}/data?field=<dotPath> -->
+    <bean id="webscript.alfresco.datasets.dataset-data.get"
+          class="org.alfresco.datasetservice.webscript.DatasetElementGetWebScript"
+          parent="webscript">
+        <property name="datasetService" ref="datasetService"/>
+    </bean>
+
+    <bean id="webscript.alfresco.datasets.dataset-data.put"
+          class="org.alfresco.datasetservice.webscript.DatasetElementSetWebScript"
+          parent="webscript">
+        <property name="datasetService" ref="datasetService"/>
+    </bean>
+
+    <bean id="webscript.alfresco.datasets.dataset-data.post"
+          class="org.alfresco.datasetservice.webscript.DatasetElementAddWebScript"
+          parent="webscript">
+        <property name="datasetService" ref="datasetService"/>
+    </bean>
+
+    <bean id="webscript.alfresco.datasets.dataset-data.delete"
+          class="org.alfresco.datasetservice.webscript.DatasetElementDeleteWebScript"
+          parent="webscript">
+        <property name="datasetService" ref="datasetService"/>
+    </bean>
+
+</beans>

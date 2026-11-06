@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>Query Dataset Records</shortname>
+    <description>Returns a dataset instance's records, optionally filtered by field=value query parameters (AND)</description>
+    <url>/alfresco/datasets/{datasetName}/records</url>
+    <format default="json">argument</format>
+    <authentication>admin</authentication>
+    <transaction allow="readonly">required</transaction>
+    <family>Hyland Dataset Service</family>
+</webscript>

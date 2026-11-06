@@ -1,0 +1,56 @@
+# ───────────── Maven ─────────────
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# ───────────── Java ─────────────
+*.class
+*.log
+hs_err_pid*
+replay_pid*
+
+# ───────────── IDEs ─────────────
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+# Eclipse
+.project
+.classpath
+.settings/
+.factorypath
+bin/
+# NetBeans
+nbproject/private/
+nbactions.xml
+# VS Code
+.vscode/
+
+# ───────────── Alfresco / SDK runtime ─────────────
+alf_data_dev/
+alfresco.log*
+solr*.log*
+*.pid
+
+# ───────────── Docker ─────────────
+# generated docker-compose lives under target/ (already ignored);
+# ignore any local env override
+.env
+
+# ───────────── OS ─────────────
+.DS_Store
+Thumbs.db
+
+# ───────────── Claude ─────────────
+CLAUDE.md
+**/CLAUDE.md
+.claude/
+.claude.json

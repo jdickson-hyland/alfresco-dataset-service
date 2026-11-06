@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>Get Dataset</shortname>
+    <description>Returns a single dataset including its full JSON content</description>
+    <url>/alfresco/datasets/{datasetName}</url>
+    <format default="json">argument</format>
+    <authentication>admin</authentication>
+    <transaction allow="readonly">required</transaction>
+    <family>Hyland Dataset Service</family>
+</webscript>

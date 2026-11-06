@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webscript>
+    <shortname>Dataset Service</shortname>
+    <description>Admin UI for creating and managing datasets stored as JSON files</description>
+    <url>/alfresco/datasetservice</url>
+    <authentication>admin</authentication>
+    <family>admin-console</family>
+</webscript>

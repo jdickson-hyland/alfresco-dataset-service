@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>Update Dataset</shortname>
+    <description>Replaces a dataset's name/description/data; creates a new version</description>
+    <url>/alfresco/datasets/{datasetName}</url>
+    <format default="json">argument</format>
+    <authentication>admin</authentication>
+    <transaction allow="readwrite">required</transaction>
+    <family>Hyland Dataset Service</family>
+</webscript>

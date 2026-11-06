@@ -1,0 +1,10 @@
+<webscript>
+    <shortname>Delete Dataset Element</shortname>
+    <description>Removes the member at the given dot-notation field path; creates a new version</description>
+    <url>/alfresco/datasets/{datasetName}/data</url>
+    <url>/alfresco/datasets/{datasetName}/data?field={field}</url>
+    <format default="json">extension</format>
+    <authentication>admin</authentication>
+    <transaction allow="readwrite">required</transaction>
+    <family>Hyland Dataset Service</family>
+</webscript>
